@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h1 class="mb-4">Client Testimonials</h1>
+    <div class="row g-4">
+      {% for t in testimonials %}
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="mb-2">
+              {% for i in range(t.rating) %}⭐{% endfor %}
+            </div>
+            <p class="card-text small">“{{ t.text }}”</p>
+            <p class="fw-bold small mb-0">{{ t.name }}</p>
+            <p class="text-muted small">{{ t.location }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

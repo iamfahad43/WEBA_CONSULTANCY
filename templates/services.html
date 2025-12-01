@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h1 class="mb-4">Our Services</h1>
+    {% for s in services %}
+    <div class="mb-4" id="{{ s.slug }}">
+      <h3>{{ s.title }}</h3>
+      <p>{{ s.description }}</p>
+      <a href="{{ url_for('appointment') }}" class="btn btn-sm btn-primary">Book Consultation</a>
+    </div>
+    <hr>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

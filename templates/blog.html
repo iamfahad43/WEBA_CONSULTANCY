@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h1 class="mb-4">Knowledge Center</h1>
+    <p class="text-muted">Articles and insights about business, VAT, tax and immigration.</p>
+
+    <div class="row g-4 mt-3">
+      {% for p in posts %}
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ p.title }}</h5>
+            <p class="text-muted small">{{ p.date }}</p>
+            <p class="card-text small">{{ p.summary }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

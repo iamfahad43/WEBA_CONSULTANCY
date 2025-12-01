@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h1 class="hero-title text-primary mb-3">
+          Your Trusted Partner in Business, Accounting & Immigration.
+        </h1>
+        <p class="hero-subtitle">
+          {{ company_name }} helps individuals and businesses in Finland and worldwide
+          with accounting, VAT, tax filings, business setup and immigration guidance.
+        </p>
+        <div class="d-flex gap-2 mt-3">
+          <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-lg">Book Appointment</a>
+          <a href="{{ url_for('services') }}" class="btn btn-outline-primary btn-lg">View Services</a>
+        </div>
+        <p class="mt-3 small text-muted">
+          Languages: Finnish, English, Urdu, Punjabi, Hindi
+        </p>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="{{ url_for('static', filename='img/weba_logo.png') }}" alt="WEBA Logo" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Our Core Services</h2>
+    <div class="row g-4">
+      {% for s in services %}
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">{{ s.title }}</h5>
+            <p class="card-text small">{{ s.description }}</p>
+            <a href="{{ url_for('services') }}#{{ s.slug }}" class="btn btn-sm btn-outline-primary">Learn more</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Satisfied Clients</h2>
+    <div class="row g-4">
+      {% for t in testimonials %}
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <div class="mb-2">
+              {% for i in range(t.rating) %}
+                ⭐
+              {% endfor %}
+            </div>
+            <p class="card-text small">“{{ t.text }}”</p>
+            <p class="fw-bold small mb-0">{{ t.name }}</p>
+            <p class="text-muted small">{{ t.location }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+      <a href="{{ url_for('testimonials') }}" class="btn btn-outline-primary btn-sm">View all testimonials</a>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-3">Ready to get started?</h2>
+    <p class="mb-4">Book a consultation and let us guide you with clarity and confidence.</p>
+    <a href="{{ url_for('appointment') }}" class="btn btn-primary btn-lg">Book Now</a>
+  </div>
+</section>
+{% endblock %}

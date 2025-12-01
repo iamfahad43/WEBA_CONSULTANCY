@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h5>Get in touch</h5>
+        <p>Fill out the form and we will respond as soon as possible.</p>
+
+        <form method="post">
+          <div class="mb-3">
+            <label class="form-label">Name *</label>
+            <input type="text" name="name" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email *</label>
+            <input type="email" name="email" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Phone</label>
+            <input type="text" name="phone" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Message *</label>
+            <textarea name="message" class="form-control" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+
+      <div class="col-md-6">
+        <h5>Office</h5>
+        <p>{{ company_city }}, {{ company_country }}</p>
+        <p>Phone: <a href="tel:{{ company_phone }}">{{ company_phone }}</a></p>
+        <p>Email: <a href="mailto:{{ company_email }}">{{ company_email }}</a></p>
+        <p>Languages: Finnish, English, Urdu, Punjabi, Hindi</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h1>Book an Appointment</h1>
+    <p class="mt-2 text-muted">
+      Share your details and preferred time. We will confirm the appointment by email or phone.
+    </p>
+
+    <form method="post" class="mt-4">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label">Full Name *</label>
+          <input type="text" name="name" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Email *</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Phone *</label>
+          <input type="text" name="phone" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Service *</label>
+          <select name="service" class="form-select" required>
+            {% for s in services %}
+            <option value="{{ s.title }}">{{ s.title }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Preferred Language *</label>
+          <select name="language" class="form-select" required>
+            <option>English</option>
+            <option>Finnish</option>
+            <option>Urdu</option>
+            <option>Punjabi</option>
+            <option>Hindi</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Preferred Date *</label>
+          <input type="date" name="date" class="form-control" required>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Preferred Time *</label>
+          <input type="time" name="time" class="form-control" required>
+        </div>
+        <div class="col-12">
+          <label class="form-label">Additional Message</label>
+          <textarea name="message" class="form-control" rows="4"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Request Appointment</button>
+    </form>
+  </div>
+</section>
+{% endblock %}

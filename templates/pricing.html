@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <h1 class="mb-4">Pricing (From)</h1>
+    <p class="text-muted">
+      Final pricing depends on the complexity of your case. Contact us or book an appointment for an exact quote.
+    </p>
+
+    <div class="row g-4 mt-3">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Accounting Packages</h5>
+            <p class="card-text">Starting from €XXX / month.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">VAT & Tax Services</h5>
+            <p class="card-text">Starting from €XXX per filing / case.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Business & Immigration Consulting</h5>
+            <p class="card-text">Starting from €XXX per session.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-4">
+      <a href="{{ url_for('appointment') }}" class="btn btn-primary">Book a Consultation</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
