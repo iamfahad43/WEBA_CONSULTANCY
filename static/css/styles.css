@@ -1,0 +1,83 @@
+/* Global */
+body {
+    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    background-color: #f7f8fb;
+}
+
+/* Navbar */
+.navbar-brand span {
+    letter-spacing: 0.03em;
+    font-size: 1.05rem;
+}
+
+.navbar-brand img {
+    max-height: 32px;
+}
+
+/* Hero section */
+.hero-section {
+    padding: 4rem 0;
+    background-color: #f5f7fb;
+}
+
+.hero-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.hero-subtitle {
+    font-size: 1.02rem;
+    color: #555;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.7rem;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+}
+
+/* Cards / sections */
+.card {
+    border: none;
+    border-radius: 0.75rem;
+}
+
+.card-body {
+    padding: 1.25rem 1.5rem;
+}
+
+section {
+    background-color: #fff;
+}
+
+section:nth-of-type(even) {
+    background-color: #f5f7fb;
+}
+
+/* Footer */
+footer {
+    font-size: 0.9rem;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    z-index: 999;
+}
