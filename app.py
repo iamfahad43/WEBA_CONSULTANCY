@@ -41,24 +41,13 @@ SERVICES = [
 
 TESTIMONIALS = [
     {
-        "name": "Ahmed, Small Business Owner",
+        "name": "Data Autogen",
         "location": "Helsinki, Finland",
         "rating": 5,
-        "text": "WEBA Consultants handled my VAT and bookkeeping with zero stress. Clear communication and reliable service."
-    },
-    {
-        "name": "Sara, Student",
-        "location": "Pakistan → Finland",
-        "rating": 5,
-        "text": "Their immigration guidance helped me understand every step of the residence permit process."
-    },
-    {
-        "name": "Mikael, Entrepreneur",
-        "location": "Espoo, Finland",
-        "rating": 4,
-        "text": "Professional advice for company registration and tax planning. Highly recommended for new founders."
-    },
+        "text": "Our company received step-by-step assistance for business registration, accounting setup, and tax-related documentation. The team at WEBA Consultants Oy made everything clear and simple, ensuring our transport service business started on solid ground."
+    }
 ]
+
 
 FAQS = {
     "Accounting & VAT": [
